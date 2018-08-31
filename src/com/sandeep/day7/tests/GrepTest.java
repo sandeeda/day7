@@ -1,4 +1,4 @@
-package day7;
+package com.sandeep.day7.tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
