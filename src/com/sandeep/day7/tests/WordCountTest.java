@@ -10,36 +10,13 @@ import java.io.IOException;
 
 import org.junit.jupiter.api.Test;
 
+import com.sandeep.day7.WordCount;
+
 class WordCountTest {
 
 	@Test
-	void testWordCount() {
-		int count=0;
-		File file=new File("C:\\filehandling\\lorem ipsum.txt");
-		try(FileReader filereader=new FileReader(file);
-				BufferedReader reader=new BufferedReader(filereader))
-		{
-			int i;
-			while((i=reader.read())!=-1)
-			{
-				char ch=(char)i;
-				if(ch==' ')
-				{
-					count++;
-				}
-			}
-			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		System.out.println("no. of words= "+count);
-		
-		assertEquals(5, count+1);
+	void testWordCount() {		
+		assertEquals(16,WordCount.count("C:\\\\filehandling\\\\lorem ipsum.txt"));
 		
 	
 	}
