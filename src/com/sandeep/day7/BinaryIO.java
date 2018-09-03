@@ -42,11 +42,12 @@ public class BinaryIO {
 
 		try(FileReader filereader = new FileReader("C:\\filehandling\\CreateData.dat");
 				BufferedReader reader= new BufferedReader(filereader);) {
+			int temp;
 			ArrayList<Integer> boyNumer=new ArrayList<>();
 			String s;
 			while((s=reader.readLine())!=null)
 			{
-				int temp;
+				
 				temp=Integer.parseInt(s,2);
 				boyNumer.add(temp);
 			}
