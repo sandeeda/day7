@@ -14,7 +14,11 @@ class OperationsTest {
 	@Test
 	void testOps() {
 
-		assertEquals(true, Operations.ops("C:\\Users\\sandeeda\\Downloads\\assignments\\day7.docx",1));
+		assertEquals(true, Operations.ops("C:\\filehandling\\lorem ipsum.txt","null",1));
+		assertEquals(true, Operations.ops("C:\\filehandling\\lorem ipsum.txt","C:\\filehandling\\lorem ipsum copy.txt", 2));
+		assertEquals(false, Operations.ops("C:\\filehandling\\lorem ipsum.txt","C:\\filehandling\\random1.txt", 2));
+		assertEquals(true, Operations.ops("C:\\filehandling\\lorem ipsum.txt","null",3));
+
 	}
 
 }
